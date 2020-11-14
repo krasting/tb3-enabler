@@ -98,6 +98,7 @@ md5_re = dict((v, re_index[k]) for k, l in re_md5.items() for v in l)
 
 def md5(filename):
     h = hashlib.md5()
+    print(filename)
     with open(filename, 'rb') as f:
         for chunk in iter(lambda: f.read(8192), b''):
             h.update(chunk)
